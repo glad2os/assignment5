@@ -12,7 +12,7 @@ namespace assignment5.tasks
             var result = 0;
             for (var i = 0; i < n; i++)
             {
-                Console.WriteLine("Please enter a number: ");
+                Console.Write("Please enter a number: ");
                 result += Tasks.GetInteger(Console.ReadLine());
             }
 
@@ -24,7 +24,7 @@ namespace assignment5.tasks
             var result = 0;
             for (var i = 0; i < n; i++)
             {
-                Console.WriteLine("Please enter a number: ");
+                Console.Write("Please enter a number: ");
                 result += Tasks.GetInteger(Console.ReadLine());
             }
 
@@ -35,6 +35,7 @@ namespace assignment5.tasks
         {
             foreach (var i in n)
                 Console.Write($" {i} ");
+            Console.WriteLine();
             //return Array.Empty<int>();
         }
 
@@ -49,13 +50,13 @@ namespace assignment5.tasks
             //return Array.Empty<int>();
         }
 
-        public static int[] CreateIntArray()
+        public static IEnumerable<int> CreateIntArray()
         {
-            Console.Write("please input array lenght");
+            Console.Write("please input array lenght: ");
             var n = Tasks.GetInteger(Console.ReadLine());
             var result = new int[n];
-            
-            foreach (var i in result)
+
+            for (var i = 0; i < result.Length; i++)
             {
                 Console.Write($"please {i} array elem: ");
                 result[i] = Tasks.GetInteger(Console.ReadLine());

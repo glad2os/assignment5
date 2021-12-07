@@ -23,12 +23,12 @@ namespace assignment5.tasks
 
         private static void Question1()
         {
-            Methods.CalculateSum(5);
+            Console.WriteLine($"Output: {Methods.CalculateSum(5)}");
         }
 
         private static void Question2()
         {
-            Methods.CalculateAverage(5);
+            Console.WriteLine($"Output: {Methods.CalculateAverage(5)}");
         }
 
         private static void Question3()
